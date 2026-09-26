@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="description" content="Origin Food Ventures. Rooted in Origin. Crafted for Taste!">
+  <title>Origin Food Ventures</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0f0f'/%3E%3Cpath d='M32 8 56 32 32 56 8 32Z' fill='%2308aaa2'/%3E%3Cpath d='M32 17 47 32 32 47 17 32Z' fill='%23fff'/%3E%3Cpath d='M32 24 40 32 32 40 24 32Z' fill='%23f26531'/%3E%3C/svg%3E">
+  <style>
+    :root { --orange: #f26531; --dark: #0f0f0f; --light: #f4f2ee; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
+    body { margin: 0; min-width: 280px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    section { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; }
+    a:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; }
+
+    .intro { position: relative; display: grid; place-items: center; overflow: hidden; padding: 100px clamp(1.25rem, 6vw, 6rem) 85px; background: var(--dark); color: #f5f2ed; text-align: center; isolation: isolate; }
+    .intro::before { content: ""; position: absolute; z-index: -1; width: min(95vw, 1100px); aspect-ratio: 1; top: 46%; left: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(242,101,49,.085), transparent 62%); pointer-events: none; }
+    .intro-content { width: min(100%, 1100px); transform: translateY(-1vh); }
+    .main-logo { width: min(100%, 980px); height: auto; margin: 0 auto; animation: rise .9s both; }
+    h1 { max-width: 1050px; margin: clamp(2.4rem, 4vw, 4.5rem) auto 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.35rem, 5.7vw, 5.8rem); font-weight: 400; letter-spacing: -.055em; line-height: 1.11; text-wrap: balance; animation: rise .9s .13s both; }
+    .scroll-indicator { position: absolute; left: 50%; bottom: clamp(1.8rem, 4vw, 3rem); width: 18px; height: 18px; border-right: 1.5px solid var(--orange); border-bottom: 1.5px solid var(--orange); transform: translateX(-50%) rotate(45deg); opacity: .8; animation: nudge 2.5s ease-in-out infinite; }
+
+    .contact { display: flex; align-items: center; justify-content: center; padding: clamp(3rem, 6vw, 6rem) clamp(1.25rem, 5vw, 5rem); background: var(--light); color: #171717; }
+    .contact-inner { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center; gap: clamp(2rem, 5vw, 6rem); width: min(100%, 1360px); }
+    h2 { margin: 0 0 clamp(1.4rem, 3vh, 2.3rem); font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.5rem, 5.4vw, 6rem); font-weight: 400; line-height: 1; letter-spacing: -.06em; text-align: left; }
+    .map-frame { width: 100%; height: clamp(380px, 68svh, 680px); overflow: hidden; border: 1px solid rgba(0,0,0,.12); border-radius: 18px; background: #e4e4e1; box-shadow: 0 24px 75px rgba(0,0,0,.12); }
+    .map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .contact-name { margin: 0 0 clamp(1.5rem, 3vh, 2.4rem); font-size: clamp(1.4rem, 2vw, 1.85rem); font-weight: 500; letter-spacing: -.025em; }
+    .detail { padding: .9rem 0 1.1rem; border-top: 1px solid rgba(23,23,23,.18); }
+    .detail:last-child { border-bottom: 1px solid rgba(23,23,23,.18); }
+    .detail-label { display: block; margin-bottom: .75rem; color: #77716b; font-size: .78rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+    .detail-value { color: #171717; font-size: clamp(1.1rem, 1.7vw, 1.55rem); line-height: 1.45; overflow-wrap: anywhere; text-decoration: none; }
+    a.detail-value:hover { color: #c75025; }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes nudge { 0%, 100% { translate: 0 0; } 50% { translate: 0 7px; } }
+    @media (max-width: 600px) {
+      .intro { padding: 95px 1.3rem 80px; }
+      h1 { margin-top: 3rem; font-size: clamp(2.4rem, 10vw, 4rem); }
+      .contact { padding: 3rem 1rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.3rem; }
+      h2 { margin-bottom: 1.8rem; font-size: clamp(3.1rem, 12vw, 4.5rem); }
+      .map-frame { height: clamp(280px, 45svh, 450px); border-radius: 12px; }
+      .detail { padding: 1rem 0 1.2rem; }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .contact-inner { gap: 2rem; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); }
+      h2 { font-size: clamp(3rem, 5.5vw, 4.5rem); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="intro" aria-labelledby="tagline">
+      <div class="intro-content" id="top">
+        <img class="main-logo" src="assets/brand-logo.png" alt="Origin Food Ventures" width="1151" height="147" fetchpriority="high">
+        <h1 id="tagline">Rooted in Origin.<br>Crafted for Taste!</h1>
+      </div>
+      <a class="scroll-indicator" href="#contact" aria-label="Scroll to Contact Us"></a>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <div class="map-frame">
+          <iframe title="Google Map of Carmina's Curry" src="https://www.google.com/maps?q=15.3749933%2C73.9295455&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="contact-details">
+          <h2 id="contact-title">Contact Us</h2>
+          <p class="contact-name">Vivek Ayanna</p>
+          <div class="detail">
+            <span class="detail-label">Email</span>
+            <a class="detail-value" href="mailto:vivek@originfoodventures.com">vivek@originfoodventures.com</a>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Phone</span>
+            <a class="detail-value" href="tel:+919442723004">+91 94427 23004</a>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Address</span>
+            <span class="detail-value">Plot L89, Phase 2 E<br>Verna Industrial Estate<br>Verna, Goa 403 722</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
